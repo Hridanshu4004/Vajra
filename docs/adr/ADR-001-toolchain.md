@@ -16,3 +16,16 @@ The project needs to run scientific Python libraries (Py-ART, pyiwr, satpy, cfgr
 - Developers on Windows must use Docker or WSL2 to run the full ingestion pipeline.
 - We avoid fighting compilation errors for legacy geospatial libraries on Windows.
 - `uv` provides exceptionally fast dependency resolution and environment management.
+
+## Toolchain Evidence (from toolchain.json)
+| Library | Python 3.14 (Native Windows) | Python 3.12 (Native Windows) | Linux Docker (Python 3.12) |
+|---|---|---|---|
+| `numpy` | OK | OK | OK |
+| `scipy` | OK | OK | OK |
+| `torch` | FAIL (No prebuilt binaries) | FAIL (Native install script failed) | SKIPPED (Docker daemon down) |
+| `arm_pyart` | FAIL (Missing C extensions) | FAIL (Missing C extensions) | SKIPPED (Docker daemon down) |
+| `cfgrib` | FAIL (ecCodes missing) | FAIL (ecCodes missing) | SKIPPED (Docker daemon down) |
+| `satpy` | FAIL (Missing dependencies) | FAIL (Missing dependencies) | SKIPPED (Docker daemon down) |
+| `pyiwr` | FAIL | FAIL | SKIPPED |
+
+*Note: CUDA torch check could not be run because the Docker daemon is not running on this host and the Windows native PyTorch install script failed.*

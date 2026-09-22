@@ -236,3 +236,7 @@ The human pastes the full report (plus logs of any FAIL) back to the architect, 
 
 ## Usage Restrictions
 These rules describe how the project is built. They carry no data of their own. Numbers quoted from the audit (machine specs, findings) come from `_audit/` and must be refreshed if the machine changes.
+
+## 9. Git Commit Discipline
+All commits MUST follow Conventional Commits format (feat:, fix:, chore:, docs:, test:, build:, refactor:, ci:, perf:).
+Commits must be grouped logically by component and change type. Do not combine unrelated changes or entire phases into single massive commits.

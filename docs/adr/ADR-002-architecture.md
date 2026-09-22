@@ -4,7 +4,7 @@
 **Status**: Accepted
 
 ## Context
-Vajra is a real-time convective-scale nowcasting platform. It must ingest multi-modal meteorological data, fuse it, generate forecasts, and serve GIS clients in real-time, operating across three profiles: `lite` (laptop/single node), `full` (small cluster), and `national` (Kubernetes cluster). 
+Vajra is a real-time convective-scale nowcasting platform. It must ingest multi-modal meteorological data, fuse it, generate forecasts, and serve GIS clients in real-time, operating across three profiles: `lite` (laptop/single node), `full` (small cluster), and `national` (Kubernetes cluster).
 
 ## Decision
 Based on the `MASTER_RULES.md`, we establish the following architecture decisions:
