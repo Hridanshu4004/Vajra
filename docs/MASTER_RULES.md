@@ -61,6 +61,7 @@
 | Bus | `EventBus` interface. Redis Streams in `lite`, Redpanda/Kafka API in `full` and `national` | Audit suggested Redis Streams only; Kafka API gives partitions and replay at national scale |
 | Gridded store | Zarr on an `ObjectStore` interface (local FS, MinIO, S3) | From audit |
 | Structured store | PostgreSQL + PostGIS + TimescaleDB | Audit suggested SQLite; SQLite does not scale to concurrent national workloads. SQLite only for unit tests |
+| Internal CRS | EPSG:7755 (India NSF LCC) | Accurate metric calculations (distance, speed, area) across the subcontinent with minimal distortion |
 | Hot state | Redis | Latest frame, pub/sub fan-out |
 | ML framework | PyTorch (+ Lightning if it installs cleanly), LightGBM for cell-level heads, ONNX Runtime for serving | From audit, extended |
 | Models | Residual learning on an advection baseline; multimodal ConvLSTM with availability-gated fusion (design idea from STORMTRACE, reimplemented); Earthformer-lite optional; no graph neural network | Proven, small enough for a 4 GB GPU, explainable |
