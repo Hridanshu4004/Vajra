@@ -13,6 +13,7 @@ This document outlines the tiered strategy for acquiring and validating data for
 ## Tier 2: Free Registration
 - **Sources**: 
   - **MOSDAC**: INSAT-3D/3DR/3DS TIR, WV, MIR channels.
+  - **Earthdata**: GPM IMERG, GPM-LIS.
   - **Copernicus CDS**: ERA5 reanalysis (CAPE, CIN, shear profiles).
   - **Kaggle**: BharatBench dataset.
 - **Purpose**: Primary thermodynamic environment modeling, precipitation estimation, and historical reanalysis baseline for India.
